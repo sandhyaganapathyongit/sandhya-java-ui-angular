@@ -9,7 +9,7 @@
 	 $routProvider.
 	   when('/master',
 	 			{
-	 				templateUrl:'../html/MasterScreen.html',
+	 				templateUrl:'../html/redirecting.html',
 	 				controller:'MasterController'
 	 			})
 	 	when('/employee',
