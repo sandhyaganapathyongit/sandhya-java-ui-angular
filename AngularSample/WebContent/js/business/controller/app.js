@@ -7,7 +7,7 @@
  
  sampleModule.config(['$routProvider',function($routProvider){
 	 $routProvider.
-	   when('/master',
+	   when('/redirecting',
 	 			{
 	 				templateUrl:'../html/redirecting.html',
 	 				controller:'MasterController'
