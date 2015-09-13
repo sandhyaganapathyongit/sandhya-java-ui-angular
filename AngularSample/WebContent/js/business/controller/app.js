@@ -36,15 +36,17 @@
 	 
  }]);
  
- sampleModule.controller('ContactController',['$scope','$rootScope',function($scope,$rootScope){
+ sampleModule.controller('ContactController',['$scope','$rootScope','employeeService',function($scope,$rootScope,employeeService){
 	 var uid = 1;
-	
-	     $scope.contacts = [
-	         { id:0, 'name': 'Sandhya', 
-	           'email':'hello@gmail.com', 
-	           'phone': '123-456-7890'
-	         }
-	     ];
+	 $rootScope.contacts = [];
+	 employeeService.getEmployees();// calling rest service for loading table with employees
+	 
+//	     $scope.contacts = [
+//	         { id:0, 'name': 'Sandhya', 
+//	           'email':'hello@gmail.com', 
+//	           'phone': '123-456-7890'
+//	         }
+//	     ];
 	      
 	     $scope.saveContact = function() {
 	          
