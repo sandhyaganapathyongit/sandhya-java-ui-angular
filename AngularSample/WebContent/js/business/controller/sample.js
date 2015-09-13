@@ -1,7 +1,41 @@
 /**
- * ContactController
+ * 
  */
  var sampleModule = angular.module('sampleApp',[]);
+ 
+//RoutProvider - single page application
+ 
+ sampleModule.config(['$routProvider',function($routProvider){
+	 $routProvider.
+	   when('/master',
+	 			{
+	 				templateUrl:'../html/MasterScreen.html',
+	 				controller:'MasterController'
+	 			})
+	 	when('/employee',
+	 			{
+	 				templateUrl:'../html/employeeManagement.html',
+	 				controller:'ContactController'
+	 			})
+	 	when('/company',
+	 			{
+	 				templateUrl:'../html/companyManagement.html',
+	 				controller:'CompanyController'
+	 		
+	 			});
+ }]);
+ 
+ 
+ //companyControler
+ sampleModule.controller('CompanyController',['$scope','$rootScope',function($scope,$rootScope){
+	 
+ }]);
+
+//masterControler
+ sampleModule.controller('MasterController',['$scope','$rootScope',function($scope,$rootScope){
+	 
+ }]);
+ 
  sampleModule.controller('ContactController',['$scope','$rootScope',function($scope,$rootScope){
 	 var uid = 1;
 	
@@ -32,8 +66,8 @@
 	         $scope.newcontact = {};
 	     };
 	  
-	      
-	     $scope.delet = function(id) {
+	   //This method will delete the row   
+	     $scope.deleteRow = function(id) {
 	          
 	         //search contact with given id and delete it
 	         for(i in $scope.contacts) {
@@ -45,12 +79,12 @@
 	          
 	     };
 	      
-	      
+	    //This method will edit current row  
 	     $scope.edit = function(id) {
 	     //search contact with given id and update it
 	         for(i in $scope.contacts) {
 	             if($scope.contacts[i].id == id) {
-	                 //we use angular.copy() method to create 
+	                 
 	                 //copy of original object
 	                 $scope.newcontact = angular.copy($scope.contacts[i]);
 	             }

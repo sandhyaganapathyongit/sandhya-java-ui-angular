@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Master Screen</title>
+
+<script  src="../js/lib/angular.min.js"> </script>
+<script  src="../js/lib/jquery-2.1.1.min.js"> </script>
+<script  src="../js/lib/bootstrap.min.js"> </script>
+<script  src="../js/lib/jquery.jquery.dataTables.js"> </script>
+<script src="../js/business/controllers/sample.js"></script>
+
+</head>
+
+<body ng-app="sampleApp" >
+<div width="900px" ng-controller="ContactController">
+<table style="background-color: gray;" id="headerTbl" width="100%">
+	<tr>
+		<td align="center" width="75%"></td>
+		<td  style="vertical-align: bottom;padding-bottom: 5px;" align="right" >
+			<button  id="logOutButton">LogOut</button>
+			<button   id="homeButton">Home</button>
+			</td>
+	</tr>
+</table>
+<table id="titleTbl" width="100%" style="background-color:maroon;color: white;font-size:medium;font: bold 14px;">
+	<tr>
+		<td width="20%"></td>
+		<td align="center" width="60%">Employee Management </td>
+		<td align="right" width="20%">Welcome</td>
+	</tr>
+</table>
+</br>
+<div ng-view></div>
+ <br></br><br></br>
+ <table width="100%"><tr><td width="4%"></td><td align="center">
+ <div style="background-color:maroon;color: white;font-size:medium;font: bold 14px;">This is a footer which is common for all screen</div>
+ </td><td width="4%"></td></tr>
+ </table>
+
+</div>
+
+
+
+</body>
+</html>
